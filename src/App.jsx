@@ -1,10 +1,71 @@
+import "./App.css";
+import background from "./assets/background.png";
+
+import bird1 from "./assets/bird1.png";
+import bird2 from "./assets/bird2.png";
+import bird3 from "./assets/bird3.png";
+import bird4 from "./assets/bird4.png";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Garden from "./garden";
+
+import { useState, useEffect } from "react";
+
 function App() {
-  return (
-    <div>
-      <h1>🌿 BranchOut</h1>
-      <p>My GitHub garden is growing.</p>
-    </div>
-  );
+  const birds = [bird1, bird2, bird3, bird4];
+
+  const [frame, setFrame] = useState(0);
+
+  const navigate = useNavigate(); // ✅ HERE
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFrame((prev) => (prev + 1) % 4);
+    }, 120);
+
+    return () => clearInterval(interval);
+  }, []);
+
+ return (
+  <Routes>
+
+    <Route
+      path="/"
+      element={
+        <div className="home">
+          <img
+            src={background}
+            alt="background"
+            className="background"
+          />
+
+          <button
+            className="enter-btn"
+            onClick={() => navigate("/garden")}
+          >
+            ENTER GARDEN
+          </button>
+
+          <div className="logo">
+            BranchOut
+          </div>
+
+          <img
+            src={birds[frame]}
+            alt="bird"
+            className="bird"
+          />
+        </div>
+      }
+    />
+
+    <Route
+      path="/garden"
+      element={<Garden />}
+    />
+
+  </Routes>
+);
+
 }
 
 export default App;
