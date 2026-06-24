@@ -7,6 +7,7 @@ import bird3 from "./assets/bird3.png";
 import bird4 from "./assets/bird4.png";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Garden from "./garden";
+import Setup from "./setup";
 
 import { useState, useEffect } from "react";
 
@@ -40,7 +41,7 @@ function App() {
 
           <button
             className="enter-btn"
-            onClick={() => navigate("/garden")}
+            onClick={() => navigate("/setup")}
           >
             ENTER GARDEN
           </button>
@@ -59,13 +60,17 @@ function App() {
     />
 
     <Route
+      path="/setup"
+      element={<Setup />}
+    />
+
+    <Route
       path="/garden"
       element={<Garden />}
     />
 
   </Routes>
 );
-
 }
 
 export default App;
