@@ -206,3 +206,52 @@
 
   font-size: 10px;
 }
+.home-button {
+  position: absolute;
+
+  right: 25px;
+  bottom: 25px;
+
+  z-index: 999;
+
+  width: 140px;
+  height: 70px;
+
+  background: #7b4f2a;
+  border: 4px solid #4a2d16;
+  border-radius: 8px;
+
+  color: #f8e9c8;
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  text-shadow: 2px 2px #3a2414;
+
+  box-shadow:
+    inset 0 3px 0 #a36b3d,
+    inset 0 -3px 0 #5b351b,
+    4px 4px 0 rgba(0,0,0,0.25);
+
+  image-rendering: pixelated;
+}
+
+.home-button {
+  position: absolute;
+
+  right: 25px;
+  bottom: 25px;
+
+  width: 80px;
+  height: 80px;
+}
+.button-icon {
+  width: 42px;
+  height: 42px;
+
+  image-rendering: pixelated;
+  object-fit: contain;
+
+  pointer-events: none;
+}

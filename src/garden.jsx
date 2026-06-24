@@ -2,6 +2,7 @@ import "./garden.css";
 
 import gardenbg from "./assets/gardenbg.png";
 import gardenasset from "./assets/gardenasset.png";
+import homeIcon from "./assets/home.png";
 
 import singleblue from "./assets/singleblue.png";
 import singlepink from "./assets/singlepink.png";
@@ -244,7 +245,16 @@ const repos = contributions;
   </div>
 
 </div>
-
+<button
+  className="home-button"
+  onClick={() => window.location.href = "/"}
+>
+  <img
+    src={homeIcon}
+    alt="Home"
+    className="button-icon"
+  />
+</button>
         {flowerPositions.map((item) => (
           <img
             key={item.id}
