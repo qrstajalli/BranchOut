@@ -26,13 +26,11 @@ import sunflower from "./assets/sunflower.png";
 
 import { useState, useEffect } from "react";
 
-// ── Garden boundary (isometric diamond shape) ──────────────────────────────
 // Tweak these 4 values until flowers stay inside your fence:
-const GARDEN_CENTER_X = 500;  // was 730, moved left
-const GARDEN_CENTER_Y = 400;  // was 520, moved up
-const GARDEN_HALF_W   = 390;  // was 480, made narrower
-const GARDEN_HALF_H   = 190;  // was 220, slightly smaller
-
+const GARDEN_CENTER_X = 640;  // nudge left
+const GARDEN_CENTER_Y = 450;  // move up more
+const GARDEN_HALF_W   = 480;  // slightly narrower
+const GARDEN_HALF_H   = 190;  // shorter
 function isInsideGarden(left, top) {
   const dx = Math.abs(left - GARDEN_CENTER_X) / GARDEN_HALF_W;
   const dy = Math.abs(top  - GARDEN_CENTER_Y) / GARDEN_HALF_H;
@@ -49,8 +47,6 @@ function getFlowerPosition() {
   } while (!isInsideGarden(left, top) && attempts < 100);
   return { left, top };
 }
-// ───────────────────────────────────────────────────────────────────────────
-
 function Garden() {
   const username = localStorage.getItem("githubUser");
 
@@ -140,35 +136,17 @@ console.log(
 );
 const repos = contributions;
 
-        const tulipCount = Math.min(
-  Math.floor(repos / 5),
-  25
-);
+ const tulipCount = Math.min(Math.floor(repos / 5), 60);
 
-const roseCount = Math.min(
-  Math.floor(repos / 50),
-  15
-);
+const roseCount = Math.min(Math.floor(repos / 50), 30);
 
-const flowerCount = Math.min(
-  Math.floor(repos / 75),
-  12
-);
+const flowerCount = Math.min(Math.floor(repos / 75), 20);
 
-const sunflowerCount = Math.min(
-  Math.floor(repos / 100),
-  10
-);
+const sunflowerCount = Math.min(Math.floor(repos / 100), 15);
 
-const bigFlowerCount = Math.min(
-  Math.floor(repos / 350),
-  5
-);
+const bigFlowerCount = Math.min(Math.floor(repos / 350), 8);
 
-const goldenFlowerCount = Math.min(
-  Math.floor(repos / 500),
-  3
-);
+const goldenFlowerCount = Math.min(Math.floor(repos / 500), 5);
 
         const generatedFlowers = [];
 
@@ -265,6 +243,7 @@ for (let i = 0; i < goldenFlowerCount; i++) {
 
         <img src={gardenbg} alt="background" className="background" />
         <img src={gardenasset} alt="garden" className="garden-asset" />
+        
         <div
   className="avatar-card"
   onClick={() => setShowRanks(true)}
