@@ -5,11 +5,6 @@
 **Your GitHub contributions, reimagined as a living pixel-art garden.**
 
 BranchOut transforms your coding activity into a personalized virtual ecosystem — every contribution helps your garden grow.
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![GitHub API](https://img.shields.io/badge/GitHub_API-181717?style=for-the-badge&logo=github&logoColor=white)
-
 </div>
 
 ---
