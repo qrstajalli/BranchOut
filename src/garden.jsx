@@ -3,6 +3,9 @@ import "./garden.css";
 import gardenbg from "./assets/gardenbg.png";
 import gardenasset from "./assets/gardenasset.png";
 import homeIcon from "./assets/home.png";
+import flowericon from "./assets/flowericon.png";
+import redHeart from "./assets/redHeart.png";
+import greyHeart from "./assets/greyHeart.png";
 
 import bluetulip from "./assets/bluetulip.png";
 import pinktulip from "./assets/pinktulip.png";
@@ -55,6 +58,8 @@ function Garden() {
   const [userData, setUserData] = useState(null);
   const [flowerPositions, setFlowerPositions] = useState([]);
   const [showRanks, setShowRanks] = useState(false);
+  const [showGuide, setShowGuide] =
+  useState(false);
   const [totalCommits, setTotalCommits] = useState(0);
 
   const tulips      = [bluetulip, pinktulip, yellowtulip, redtulip];
@@ -199,7 +204,83 @@ function Garden() {
         <button className="home-button" onClick={() => window.location.href = "/"}>
           <img src={homeIcon} alt="Home" className="button-icon" />
         </button>
+        <button
+  className="guide-button"
+  onClick={() => setShowGuide(true)}
+>
+  <img
+    src={flowericon}
+    alt="Flower Guide"
+    className="guide-icon"
+  />
+</button>
+{showGuide && (
+  <div className="flower-guide-popup">
 
+    <div className="guide-header">
+      Flower Guide
+
+      <button
+        className="guide-close"
+        onClick={() => setShowGuide(false)}
+      >
+        ✕
+      </button>
+    </div>
+
+    <div className="guide-list">
+
+      <div className="guide-item">
+        <img src={pinktulip} alt="" />
+        <div>
+          <div>Tulip</div>
+          <div>Every 5 contributions</div>
+        </div>
+      </div>
+
+      <div className="guide-item">
+        <img src={redrose} alt="" />
+        <div>
+          <div>Rose</div>
+          <div>Every 50 contributions</div>
+        </div>
+      </div>
+
+      <div className="guide-item">
+        <img src={pinkflower} alt="" />
+        <div>
+          <div>Wild Flower</div>
+          <div>Every 75 contributions</div>
+        </div>
+      </div>
+
+      <div className="guide-item">
+        <img src={sunflower} alt="" />
+        <div>
+          <div>Sunflower</div>
+          <div>Every 100 contributions</div>
+        </div>
+      </div>
+
+      <div className="guide-item">
+        <img src={pinkbigflower} alt="" />
+        <div>
+          <div>Grand Blossom</div>
+          <div>Every 350 contributions</div>
+        </div>
+      </div>
+
+      <div className="guide-item">
+        <img src={goldenflower} alt="" />
+        <div>
+          <div>Golden Flower</div>
+          <div>Every 500 contributions</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+)}
         {flowerPositions.map((item) => (
           <img
             key={item.id}
@@ -220,6 +301,20 @@ function Garden() {
           {username}
           <div className="vine vine-right"></div>
         </div>
+        <div className="username-hearts">
+  {[1,2,3,4,5,6].map((heart) => (
+    <img
+      key={heart}
+      src={
+        heart <= level
+          ? redHeart
+          : greyHeart
+      }
+      alt=""
+      className="heart-icon"
+    />
+  ))}
+</div>
 
         {showRanks && (
           <div className="rank-popup">

@@ -39,7 +39,7 @@ function App() {
             className="background"
           />
           <a
-  href="https://github.com/qrstajalli"
+  href="https://github.com/qrstajalli/BranchOut"
   target="_blank"
   rel="noopener noreferrer"
   className="github-btn"
