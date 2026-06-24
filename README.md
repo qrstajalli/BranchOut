@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌸 BranchOut
+#  BranchOut 🌻
 
 **Your GitHub contributions, reimagined as a living pixel-art garden.**
 
@@ -119,6 +119,9 @@ Contributions are welcome! If you'd like to add new flora, fix a bug, or improve
 5. Open a Pull Request
 
 ---
+## Inspiration
+
+BranchOut was inspired by projects such as Git Garden that explore creative ways to visualize GitHub activity. BranchOut expands on this idea through a game-inspired pixel-art experience, progression system, and contribution-based garden generation.
 
 ## 📄 License
 
