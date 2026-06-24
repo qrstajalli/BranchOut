@@ -4,7 +4,7 @@
 
 **Your GitHub contributions, reimagined as a living pixel-art garden.**
 
-BranchOut transforms your coding activity into a personalized virtual ecosystem — every commit, PR, and review helps your garden grow.
+BranchOut transforms your coding activity into a personalized virtual ecosystem — every contribution helps your garden grow.
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
@@ -18,7 +18,7 @@ BranchOut transforms your coding activity into a personalized virtual ecosystem 
 
 Most developer dashboards ask you to interpret numbers. BranchOut lets you **watch your journey bloom**.
 
-Enter your GitHub username and BranchOut generates a unique pixel-art garden seeded by your last 365 days of contributions. The more you code, the more your garden grows — from a single seedling to a lush landscape of rare golden flowers.
+Enter your GitHub username and BranchOut generates a unique pixel-art garden seeded by your last 365 days of contributions. The more you code, the more your garden grows — from a modest garden to a flourishing landscape of rare flowers.
 
 ---
 
@@ -81,7 +81,7 @@ npm run preview
 | Framework | React + Vite |
 | Routing | React Router |
 | Data | GitHub REST API, GitHub Contributions API |
-| Rendering | Procedural pixel-art generation (canvas / SVG) |
+| Rendering | Rendering | Dynamic pixel-art asset generation |
 | Styling | Custom pixel-art design system |
 
 ---
@@ -89,7 +89,7 @@ npm run preview
 ## 🎮 How It Works
 
 1. **Enter your GitHub username** on the landing page.
-2. BranchOut fetches your **profile and contribution data** via the GitHub API.
+2. BranchOut fetches profile information through the GitHub REST API and **contribution history** through the GitHub Contributions API.
 3. Your trailing 365-day contribution total is calculated and mapped to a **rank and level**.
 4. A garden is **procedurally generated** — flower types, counts, and positions are determined by your contribution milestones, randomized within predefined boundaries for a natural look.
 5. The result is a **unique pixel-art garden** that reflects your recent development activity.
