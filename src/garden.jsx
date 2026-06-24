@@ -72,24 +72,44 @@ function Garden() {
   const bigFlowers    = [bluebigflower, pinkbigflower, yellowbigflower];
   
 
-const level =
-  Math.floor(totalCommits / 10) + 1;
-
-let title = "Seedling";
+let level = 0;
 
 if (totalCommits >= 10)
-  title = "Gardener";
-
-if (totalCommits >= 25)
-  title = "Flower Keeper";
+  level = 1;
 
 if (totalCommits >= 50)
-  title = "Green Thumb";
+  level = 2;
 
 if (totalCommits >= 100)
+  level = 3;
+
+if (totalCommits >= 500)
+  level = 4;
+
+if (totalCommits >= 1000)
+  level = 5;
+
+if (totalCommits >= 2000)
+  level = 6;
+
+let title = "Visitor";
+
+if (totalCommits >= 10)
+  title = "Seedling";
+
+if (totalCommits >= 50)
+  title = "Gardener";
+
+if (totalCommits >= 100)
+  title = "Flower Keeper";
+
+if (totalCommits >= 500)
+  title = "Rose Cultivator";
+
+if (totalCommits >= 1000)
   title = "Master Gardener";
 
-if (totalCommits >= 250)
+if (totalCommits >= 2000)
   title = "Garden Lord";
 
   useEffect(() => {
@@ -268,28 +288,28 @@ const repos = contributions;
     <div className="rank-list">
 
       <div className="rank-item">
-        🌱 Seedling — 0+
-      </div>
+  🌱 Seedling — 10+
+</div>
 
-      <div className="rank-item">
-        🌿 Gardener — 10+
-      </div>
+<div className="rank-item">
+  🌿 Gardener — 50+
+</div>
 
-      <div className="rank-item">
-        🌸 Flower Keeper — 25+
-      </div>
+<div className="rank-item">
+  🌸 Flower Keeper — 100+
+</div>
 
-      <div className="rank-item">
-        🍃 Green Thumb — 50+
-      </div>
+<div className="rank-item">
+  🌹 Rose Cultivator — 500+
+</div>
 
-      <div className="rank-item">
-        🌳 Master Gardener — 100+
-      </div>
+<div className="rank-item">
+  🌳 Master Gardener — 1000+
+</div>
 
-      <div className="rank-item">
-        👑 Garden Lord — 250+
-      </div>
+<div className="rank-item">
+  👑 Garden Lord — 2000+
+</div>
 
     </div>
 
