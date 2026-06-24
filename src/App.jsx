@@ -46,9 +46,15 @@ function App() {
             ENTER GARDEN
           </button>
 
-          <div className="logo">
-            BranchOut
-          </div>
+          <div className="hero">
+  <div className="logo">
+    BranchOut
+  </div>
+
+  <div className="tagline">
+    Your GitHub journey, in bloom.
+  </div>
+</div>
 
           <img
             src={birds[frame]}

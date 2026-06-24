@@ -1,0 +1,79 @@
+.setup-page {
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.setup-background {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: -1;
+}
+
+.setup-content {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.setup-title {
+  color: white;
+
+  font-size: 48px;
+
+  text-shadow:
+    3px 3px 0px #8a78d1,
+    6px 6px 0px rgba(0,0,0,0.2);
+}
+
+.setup-subtitle {
+  color: white;
+
+  text-shadow:
+    2px 2px 0 #8ccf62,
+    4px 4px 0 #4a6b35;
+
+  font-size: 12px;
+}
+
+.setup-input {
+  width: 280px;
+
+  padding: 12px;
+
+  border-radius: 8px;
+
+  border: 3px solid #8a78d1;
+}
+
+.setup-button {
+  padding: 18px 30px;
+
+  font-family: "Press Start 2P", cursive;
+
+  border: 4px solid #a9a4ff;
+
+  background: #b6b1ff;
+
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 0 #8a78d1,
+    0 10px 0 rgba(0,0,0,0.15);
+}

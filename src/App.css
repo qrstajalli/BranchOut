@@ -24,16 +24,43 @@ body {
 }
 
 .logo {
-  position: absolute;
-  top: 20px;
-  left: 80px;
-
   color: white;
-  font-size: 24px;
+
+  font-size: 48px;
 
   text-shadow:
     3px 3px 0px #8a78d1,
     6px 6px 0px rgba(0,0,0,0.2);
+}
+.hero {
+  position: absolute;
+
+  top: 80px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  text-align: center;
+
+  z-index: 10;
+}
+
+.tagline {
+  margin-top: 18px;
+
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+
+  color: #f7f6e8;
+
+  text-shadow:
+    0 0 6px rgba(145, 214, 96, 0.8),
+    2px 2px 0 #4a6b35,
+    3px 3px 0 rgba(0, 0, 0, 0.25);
+
+  letter-spacing: 1px;
+
+  image-rendering: pixelated;
 }
 .bird {
   position: absolute;
@@ -76,7 +103,7 @@ body {
 .enter-btn {
   position: absolute;
 
-  top: 55%;
+  top: 65%;
   left: 50%;
 
   transform: translate(-50%, -50%);
@@ -88,9 +115,28 @@ body {
   border: 4px solid #a9a4ff;
   border-radius: 12px;
 
-  background: rgba(180, 180, 255, 0.25);
+ background: #b6b1ff;
 
   color: white;
+  box-shadow:
+  0 6px 0 #8a78d1,
+  0 10px 0 rgba(0,0,0,0.15);
+
+text-shadow:
+  2px 2px 0 rgba(0,0,0,0.25);
+
+transition: all 0.1s ease;
 
   cursor: pointer;
+}
+.enter-btn:hover {
+  transform:
+    translate(-50%, -53%);
+}
+.enter-btn:active {
+  transform:
+    translate(-50%, -44%);
+
+  box-shadow:
+    0 2px 0 #8a78d1;
 }

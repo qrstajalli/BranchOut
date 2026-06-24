@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import gardenbg from "./assets/gardenbg.png";
+import "./setup.css";
 
 function Setup() {
   const [username, setUsername] = useState("");
@@ -14,34 +16,45 @@ function Setup() {
   };
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        gap: "20px",
-      }}
-    >
-      <h1>🌱 BranchOut</h1>
+  <div className="setup-page">
+
+    <img
+      src={gardenbg}
+      alt="background"
+      className="setup-background"
+    />
+
+    <div className="setup-content">
+
+      <h1 className="setup-title">
+        🌱 BranchOut
+      </h1>
+
+      <p className="setup-subtitle">
+        Your GitHub journey, in bloom.
+      </p>
 
       <input
         type="text"
         placeholder="Enter GitHub Username"
         value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        style={{
-          padding: "10px",
-          width: "250px",
-        }}
+        onChange={(e) =>
+          setUsername(e.target.value)
+        }
+        className="setup-input"
       />
 
-      <button onClick={handleSubmit}>
+      <button
+        onClick={handleSubmit}
+        className="setup-button"
+      >
         Grow Garden
       </button>
+
     </div>
-  );
+
+  </div>
+);
 }
 
 export default Setup;
