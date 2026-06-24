@@ -27,32 +27,30 @@ function Setup() {
     <div className="setup-content">
 
       <h1 className="setup-title">
-        🌱 BranchOut
+         BranchOut
       </h1>
 
-      <p className="setup-subtitle">
-        Your GitHub journey, in bloom.
-      </p>
+    
 
-      <input
-        type="text"
-        placeholder="Enter GitHub Username"
-        value={username}
-        onChange={(e) =>
-          setUsername(e.target.value)
-        }
-        className="setup-input"
-      />
+      <div className="setup-row">
 
-      <button
-        onClick={handleSubmit}
-        className="setup-button"
-      >
-        Grow Garden
-      </button>
+  <input
+    type="text"
+    placeholder="Enter GitHub Username"
+    value={username}
+    onChange={(e) => setUsername(e.target.value)}
+    className="setup-input"
+  />
 
+  <button
+    onClick={handleSubmit}
+    className="setup-button"
+  >
+    Grow Garden
+  </button>
+
+</div>
     </div>
-
   </div>
 );
 }

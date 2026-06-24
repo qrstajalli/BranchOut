@@ -1,6 +1,6 @@
 import "./App.css";
 import background from "./assets/background.png";
-
+import githubLogo from "./assets/githubicon.png";
 import bird1 from "./assets/bird1.png";
 import bird2 from "./assets/bird2.png";
 import bird3 from "./assets/bird3.png";
@@ -38,6 +38,18 @@ function App() {
             alt="background"
             className="background"
           />
+          <a
+  href="https://github.com/qrstajalli"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="github-btn"
+>
+  <img
+    src={githubLogo}
+    alt="GitHub"
+    className="github-icon"
+  />
+</a>
 
           <button
             className="enter-btn"

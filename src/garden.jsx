@@ -4,17 +4,10 @@ import gardenbg from "./assets/gardenbg.png";
 import gardenasset from "./assets/gardenasset.png";
 import homeIcon from "./assets/home.png";
 
-import singleblue from "./assets/singleblue.png";
-import singlepink from "./assets/singlepink.png";
-import singleyellow from "./assets/singleyellow.png";
-
 import bluetulip from "./assets/bluetulip.png";
 import pinktulip from "./assets/pinktulip.png";
 import yellowtulip from "./assets/yellowtulip.png";
 import redtulip from "./assets/redtulip.png";
-
-import babyrosepink from "./assets/babyrosepink.png";
-import babyrosered from "./assets/babyrosered.png";
 
 import bluerose from "./assets/bluerose.png";
 import pinkrose from "./assets/pinkrose.png";
@@ -29,6 +22,7 @@ import pinkbigflower from "./assets/pinkbigflower.png";
 import yellowbigflower from "./assets/yellowbigflower.png";
 
 import goldenflower from "./assets/goldenflower.png";
+import sunflower from "./assets/sunflower.png";
 
 import { useState, useEffect } from "react";
 
@@ -65,12 +59,17 @@ function Garden() {
   const [showRanks, setShowRanks] = useState(false);
   const [totalCommits, setTotalCommits] = useState(0);
 
-  const singleFlowers = [singleblue, singlepink, singleyellow];
   const tulips        = [bluetulip, pinktulip, yellowtulip, redtulip];
-  const babyRoses     = [babyrosepink, babyrosered];
   const roses         = [bluerose, pinkrose, redrose];
   const flowers       = [blueflower, pinkflower, yellowflower];
   const bigFlowers    = [bluebigflower, pinkbigflower, yellowbigflower];
+  const sunflowers = [
+  sunflower,
+];
+
+const goldenFlowers = [
+  goldenflower,
+];
   
 
 let level = 0;
@@ -141,23 +140,38 @@ console.log(
 );
 const repos = contributions;
 
-        const singleCount   = Math.min(repos, 40);
-        const tulipCount    = Math.min(Math.floor(repos / 5),   25);
-        const babyRoseCount = Math.min(Math.floor(repos / 10),  20);
-        const roseCount     = Math.min(Math.floor(repos / 50),  15);
-        const flowerCount   = Math.min(Math.floor(repos / 100), 10);
-        const bigFlowerCount= Math.min(Math.floor(repos / 200),  5);
+        const tulipCount = Math.min(
+  Math.floor(repos / 5),
+  25
+);
+
+const roseCount = Math.min(
+  Math.floor(repos / 50),
+  15
+);
+
+const flowerCount = Math.min(
+  Math.floor(repos / 75),
+  12
+);
+
+const sunflowerCount = Math.min(
+  Math.floor(repos / 100),
+  10
+);
+
+const bigFlowerCount = Math.min(
+  Math.floor(repos / 350),
+  5
+);
+
+const goldenFlowerCount = Math.min(
+  Math.floor(repos / 500),
+  3
+);
 
         const generatedFlowers = [];
 
-        for (let i = 0; i < singleCount; i++) {
-          const { left, top } = getFlowerPosition();
-          generatedFlowers.push({
-            id: Math.random(), left, top,
-            flower: singleFlowers[Math.floor(Math.random() * singleFlowers.length)],
-            size: 14,
-          });
-        }
 
         for (let i = 0; i < tulipCount; i++) {
           const { left, top } = getFlowerPosition();
@@ -168,14 +182,6 @@ const repos = contributions;
           });
         }
 
-        for (let i = 0; i < babyRoseCount; i++) {
-          const { left, top } = getFlowerPosition();
-          generatedFlowers.push({
-            id: Math.random(), left, top,
-            flower: babyRoses[Math.floor(Math.random() * babyRoses.length)],
-            size: 22,
-          });
-        }
 
         for (let i = 0; i < roseCount; i++) {
           const { left, top } = getFlowerPosition();
@@ -203,6 +209,44 @@ const repos = contributions;
             size: 38,
           });
         }
+       for (let i = 0; i < sunflowerCount; i++) {
+  const { left, top } = getFlowerPosition();
+
+  generatedFlowers.push({
+    id: Math.random(),
+    left,
+    top,
+
+    flower:
+      sunflowers[
+        Math.floor(
+          Math.random() *
+            sunflowers.length
+        )
+      ],
+
+    size: 38,
+  });
+}
+for (let i = 0; i < goldenFlowerCount; i++) {
+  const { left, top } = getFlowerPosition();
+
+  generatedFlowers.push({
+    id: Math.random(),
+    left,
+    top,
+
+    flower:
+      goldenFlowers[
+        Math.floor(
+          Math.random() *
+            goldenFlowers.length
+        )
+      ],
+
+    size: 42,
+  });
+}
 
         setFlowerPositions(generatedFlowers);
       } catch (error) {
