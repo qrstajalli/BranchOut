@@ -118,3 +118,42 @@
     inset 0 -2px 0 #5b351b,
     1px 1px 0 rgba(0,0,0,0.25);
 }
+.back-btn {
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  z-index: 100;
+
+  min-width: 120px;
+  height: 50px;
+
+  background: #7b4f2a;
+
+  border: 4px solid #4a2d16;
+  border-radius: 8px;
+
+  color: #f8e9c8;
+
+  font-family: "Press Start 2P", cursive;
+  font-size: 10px;
+
+  text-shadow:
+    2px 2px #3a2414;
+
+  box-shadow:
+    inset 0 3px 0 #a36b3d,
+    inset 0 -3px 0 #5b351b,
+    4px 4px 0 rgba(0,0,0,0.25);
+
+  cursor: pointer;
+
+  transition: all 0.15s ease;
+}
+.back-btn:hover {
+  transform: translateY(-2px);
+}
+.back-btn:active {
+  transform: translateY(2px);
+}

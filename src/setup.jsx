@@ -17,6 +17,12 @@ function Setup() {
 
   return (
   <div className="setup-page">
+    <button
+  className="back-btn"
+  onClick={() => navigate("/")}
+>
+  ← Back
+</button>
 
     <img
       src={gardenbg}

@@ -249,6 +249,22 @@
   width: 80px;
   height: 80px;
 }
+.home-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    inset 0 3px 0 #a36b3d,
+    inset 0 -3px 0 #5b351b,
+    6px 6px 0 rgba(0,0,0,0.25);
+}
+.home-btn:active {
+  transform: translateY(2px);
+
+  box-shadow:
+    inset 0 2px 0 #a36b3d,
+    inset 0 -2px 0 #5b351b,
+    2px 2px 0 rgba(0,0,0,0.25);
+}
 .button-icon {
   width: 42px;
   height: 42px;
