@@ -23,9 +23,11 @@ import yellowflower from "./assets/yellowflower.png";
 import bluebigflower from "./assets/bluebigflower.png";
 import pinkbigflower from "./assets/pinkbigflower.png";
 import yellowbigflower from "./assets/yellowbigflower.png";
+import multibigflower from "./assets/multibigflower.png";
 
 import goldenflower from "./assets/goldenflower.png";
 import sunflower from "./assets/sunflower.png";
+import lockIcon from "./assets/lock.png";
 
 import { useState, useEffect } from "react";
 
@@ -230,53 +232,162 @@ function Garden() {
 
     <div className="guide-list">
 
-      <div className="guide-item">
-        <img src={pinktulip} alt="" />
-        <div>
-          <div>Tulip</div>
-          <div>Every 5 contributions</div>
-        </div>
-      </div>
+      <div
+  className={
+    totalCommits < 5
+      ? "guide-item locked-item"
+      : "guide-item"
+  }
+>
 
-      <div className="guide-item">
-        <img src={redrose} alt="" />
+  <img
+    src={pinktulip}
+    alt=""
+  />
+
+  <div>
+    <div>Tulip</div>
+    <div>Every 5 Contributions</div>
+  </div>
+
+  {totalCommits < 5 && (
+    <img
+      src={lockIcon}
+      alt=""
+      className="lock-icon"
+    />
+  )}
+
+</div>
+
+      <div
+  className={
+    totalCommits < 50
+      ? "guide-item locked-item"
+      : "guide-item"
+  }
+>
+
+  <img
+    src={redrose}
+    alt=""
+  />
         <div>
           <div>Rose</div>
           <div>Every 50 contributions</div>
         </div>
-      </div>
+       {totalCommits < 50 && (
+    <img
+      src={lockIcon}
+      alt=""
+      className="lock-icon"
+    />
+  )}
+  </div>
 
-      <div className="guide-item">
-        <img src={pinkflower} alt="" />
+      <div
+  className={
+    totalCommits < 75
+      ? "guide-item locked-item"
+      : "guide-item"
+  }
+>
+
+  <img
+    src={blueflower}
+    alt=""
+  />
         <div>
           <div>Wild Flower</div>
           <div>Every 75 contributions</div>
         </div>
-      </div>
+      
+       {totalCommits < 75 && (
+    <img
+      src={lockIcon}
+      alt=""
+      className="lock-icon"
+    />
+  )}
+  </div>
 
-      <div className="guide-item">
-        <img src={sunflower} alt="" />
-        <div>
+      <div
+  className={
+    totalCommits < 100
+      ? "guide-item locked-item"
+      : "guide-item"
+  }
+>
+
+  <img
+    src={sunflower}
+    alt=""
+  />
+        <div className="guide-text">
           <div>Sunflower</div>
           <div>Every 100 contributions</div>
         </div>
-      </div>
+      
+       {totalCommits < 100 && (
+    <img
+      src={lockIcon}
+      alt=""
+      className="lock-icon"
+    />
+  )}
+  </div>
 
-      <div className="guide-item">
-        <img src={pinkbigflower} alt="" />
+      <div
+  className={
+    totalCommits < 350
+      ? "guide-item locked-item"
+      : "guide-item"
+  }
+>
+
+  <img
+    src={multibigflower}
+    alt=""
+  />
         <div>
           <div>Grand Blossom</div>
           <div>Every 350 contributions</div>
         </div>
-      </div>
+      
+       {totalCommits < 350 && (
+    <img
+      src={lockIcon}
+      alt=""
+      className="lock-icon"
+    />
+  )}
+  </div>
 
-      <div className="guide-item">
-        <img src={goldenflower} alt="" />
+      <div
+  className={
+    totalCommits < 500
+      ? "guide-item locked-item"
+      : "guide-item"
+  }
+>
+
+  <img
+    src={goldenflower}
+    alt=""
+  />
         <div>
           <div>Golden Flower</div>
           <div>Every 500 contributions</div>
         </div>
-      </div>
+      
+       {totalCommits < 500 && (
+    <img
+      src={lockIcon}
+      alt=""
+      className="lock-icon"
+    />
+  )}
+  </div>
 
     </div>
   </div>
