@@ -83,7 +83,7 @@ npm run preview
 
 ## 🎮 How It Works
 
-1. **Enter your GitHub username** on the landing page.
+1. **Enter your GitHub username** 
 2. BranchOut fetches profile information through the GitHub REST API and **contribution history** through the GitHub Contributions API.
 3. Your trailing 365-day contribution total is calculated and mapped to a **rank and level**.
 4. A garden is **procedurally generated** — flower types, counts, and positions are determined by your contribution milestones, randomized within predefined boundaries for a natural look.
@@ -97,7 +97,7 @@ npm run preview
 |--------|-----------------|
 | 🌷 Tulip | Early contributions — getting started |
 | 🌹 Rose | Consistent activity over time |
-| 💐 Decorative Flower | Mid-tier milestones |
+| 💐 Wildflower | Mid-tier milestones |
 | 🌻 Sunflower | Major contribution landmarks |
 | ✨ Golden Flower | Prestige reward for top contributors |
 
@@ -125,9 +125,5 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 ---
 
 <div align="center">
-
-Made with 🌸 by developers, for developers.
-
-*Stop counting commits. Start growing gardens.*
 
 </div>
