@@ -28,15 +28,14 @@ import multibigflower from "./assets/multibigflower.png";
 import goldenflower from "./assets/goldenflower.png";
 import sunflower from "./assets/sunflower.png";
 import lockIcon from "./assets/lock.png";
+import heartTip from "./assets/hearttip.png";
 
 import { useState, useEffect } from "react";
 
-// ── Tweak these 4 values to move the flower spawn area ─────────
 const GARDEN_CENTER_X = 670;
 const GARDEN_CENTER_Y = 480;
 const GARDEN_HALF_W   = 400;
 const GARDEN_HALF_H   = 160;
-// ───────────────────────────────────────────────────────────────
 
 function isInsideGarden(left, top) {
   const dx = Math.abs(left - GARDEN_CENTER_X) / GARDEN_HALF_W;
@@ -62,6 +61,7 @@ function Garden() {
   const [showRanks, setShowRanks] = useState(false);
   const [showGuide, setShowGuide] =
   useState(false);
+  const [showTip, setShowTip] = useState(false);
   const [totalCommits, setTotalCommits] = useState(0);
 
   const tulips      = [bluetulip, pinktulip, yellowtulip, redtulip];
@@ -202,6 +202,16 @@ function Garden() {
             <div className="level-text">Level {level}</div>
           </div>
         </div>
+        <div
+  className="tip-heart"
+  onClick={() => setShowTip(true)}
+>
+  <img
+    src={heartTip}
+    alt=""
+    className="tip-heart-icon"
+  />
+</div>
 
         <button className="home-button" onClick={() => window.location.href = "/"}>
           <img src={homeIcon} alt="Home" className="button-icon" />
@@ -390,6 +400,41 @@ function Garden() {
   </div>
 
     </div>
+  </div>
+)}
+{showTip && (
+  <div className="flower-guide-popup">
+
+    <div className="guide-header">
+     Note from the Garden❀
+
+      <button
+        className="guide-close"
+        onClick={() => setShowTip(false)}
+      >
+        ✕
+      </button>
+    </div>
+
+    <div className="guide-list">
+
+      <div className="guide-item">
+
+        <div className="guide-text">
+          <div>
+            Flowers may settle differently each time.
+          </div>
+
+          <div>
+            Refresh your garden for a fresh arrangement.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 )}
         {flowerPositions.map((item) => (

@@ -504,3 +504,45 @@
 .guide-text {
   flex: 1;
 }
+@keyframes floatHeart {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+.tip-heart {
+
+  position: absolute;
+
+  right: 60px;
+  bottom: 170px;
+
+  cursor: pointer;
+
+  animation:
+    floatHeart 2s ease-in-out infinite;
+
+  z-index: 20;
+
+}
+.tip-heart-icon {
+
+  width: 110px;
+
+  image-rendering: pixelated;
+
+}
+.tip-heart:hover {
+
+  transform: scale(1.08);
+
+}
