@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 function App() {
   const isMobile = window.innerWidth <= 900;
   console.log("Width:", window.innerWidth);
-console.log("Mobile:", isMobile);
+  console.log("Mobile:", isMobile);
   const birds = [bird1, bird2, bird3, bird4];
 
   const [frame, setFrame] = useState(0);
@@ -31,14 +31,14 @@ console.log("Mobile:", isMobile);
   if (isMobile) {
   return (
     <div className="mobile-screen">
-      <h1>🌸 BranchOut</h1>
+      {/*<h1>🌸 BranchOut</h1>*/}
 
       <p>
-        This garden is best experienced on a larger screen.
+        Branchout is best experienced on a larger screen,
       </p>
 
       <p>
-        Please visit from a laptop or desktop to begin your gardening journey.
+        Please visit from a laptop or desktop to begin.
       </p>
     </div>
   );
